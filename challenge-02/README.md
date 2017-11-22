@@ -28,7 +28,8 @@ Onde VALOR é o novo valor da variável.
 */
   
   function valoriza(){
-    x = "valor";
+    x = 20;
+    return 'O valor da variavel agora é ' + x;
   }
 
 // Invoque a função criada acima.
@@ -38,7 +39,7 @@ Onde VALOR é o novo valor da variável.
 // Qual o retorno da função? (Use comentários de bloco).
 ?
 
-  /* "valor" */
+  /* O valor da variavel agora é 20 */
 
 /*
 Crie uma função com as seguintes características:
@@ -50,8 +51,8 @@ Crie uma função com as seguintes características:
 ?
 
   function teste(x, y, z){
-    if( x == "" || y == "" || z == ""){
-      alert("Preencha todos os valores corretamente!");
+    if( x === undefined || y === undefined || z === undefined){
+      return "Preencha todos os valores corretamente";
     } 
     
     return ((x * y * z) + 2);"
