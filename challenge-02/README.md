@@ -53,22 +53,25 @@ Crie uma função com as seguintes características:
   function teste(x, y, z){
     if( x === undefined || y === undefined || z === undefined){
       return "Preencha todos os valores corretamente";
-    } 
-    
-    return ((x * y * z) + 2);"
+    }
+    else{    
+    return (x * y * z) + 2;
+    }
   }
 
 // Invoque a função criada acima, passando só dois números como argumento.
-?
+teste(1,2);
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
-NaN
+//"Preencha todos os valores corretamente"
 
 // Agora invoque novamente a função criada acima, mas passando todos os três argumentos necessários.
 ?
+teste(1,2,3);
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
 ?
+//8
 
 /*
 Crie uma função com as seguintes características:
@@ -81,6 +84,44 @@ Crie uma função com as seguintes características:
 */
 ?
 
+  function novaFuncao(a,b,c){
+    if( a !== undefined && b === undefined && c === undefined ){
+      return a;
+    }
+    else if( a !== undefined && b !== undefined && c === undefined ){
+      return a+b;
+    }
+    else if( a !== undefined && b !== undefined && c !== undefined ){
+      return (a+b)/c;
+    }
+    else if( a === undefined && b === undefined && c === undefined ){
+      return false;
+    }
+    else{
+      return null;
+    }
+  }
+
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
 ?
+/* 
+  novaFuncao(1);
+  1
+*/
+
+/* 
+  novaFuncao(1,2);
+  3
+*/
+
+/* 
+  novaFuncao(1,2,3);
+  1
+*/
+
+/* 
+  novaFuncao();
+  false
+*/
+
 ```
