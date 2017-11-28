@@ -9,13 +9,26 @@ para o contrário.
 */
 ?
 
+  var isTruthy = function(a){
+    if ( a === undefined || a === null || a === NaN || a === 0 || a === -0 || a === '' || a === ""){
+      return false;
+    }
+    else{
+      return true;
+    }
+  }
+
 // Invoque a função criada acima, passando todos os tipos de valores `falsy`.
 ?
+
+  isTruthy();
 
 /*
 Invoque a função criada acima passando como parâmetro 10 valores `truthy`.
 */
 ?
+
+  isTruthy(10);
 
 /*
 Declare uma variável chamada `carro`, atribuindo à ela um objeto com as
@@ -31,26 +44,51 @@ seguintes propriedades (os valores devem ser do tipo mostrado abaixo):
 */
 ?
 
+  var carro = {
+    marca: 'Fiat',
+    modelo: 'Palio',
+    placa: 'JPG2221',
+    ano: 2001,
+    cor: 'Azul',
+    quantasPortas: 2,
+    assentos: 5,
+    quantidadeDePessoas: 0
+  }
+
 /*
 Crie um método chamado `mudarCor` que mude a cor do carro conforme a cor
 passado por parâmetro.
 */
 ?
 
+  carro.mudaCor = function(cor){
+    carro.cor = cor;
+  }
+
 /*
 Crie um método chamado `obterCor`, que retorne a cor do carro.
 */
 ?
+
+  carro.obterCor = function(){
+    return 'A cor do carro é ' + carro.cor;
+  }
 
 /*
 Crie um método chamado `obterModelo` que retorne o modelo do carro.
 */
 ?
 
+  carro.obterModelo = function(){
+    return 'O modelo do carro é ' + carro.modelo;
+  }
+
 /*
 Crie um método chamado `obterMarca` que retorne a marca do carro.
 */
 ?
+
+  
 
 /*
 Crie um método chamado `obterMarcaModelo`, que retorne:
@@ -58,6 +96,10 @@ Crie um método chamado `obterMarcaModelo`, que retorne:
 Para retornar os valores de marca e modelo, utilize os métodos criados.
 */
 ?
+
+  carro.obterMarcaModelo = function(){
+    return carro.obterMarca() + ' e ' + carro.obterModelo();
+  }
 
 /*
 Crie um método que irá adicionar pessoas no carro. Esse método terá as
@@ -76,6 +118,7 @@ mostrar quantos assentos ainda podem ser ocupados, com a frase:
 citado acima, no lugar de "pessoas".
 */
 ?
+
 
 /*
 Agora vamos verificar algumas informações do carro. Para as respostas abaixo,
