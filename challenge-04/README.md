@@ -121,6 +121,34 @@ citado acima, no lugar de "pessoas".
 */
 ?
 
+  carro.adicionarPessoas = function( numPessoas ){
+  
+	//TOTAL DE PESSOAS É A SOMA DA QUANTIDADE DE PESSOAS JÁ EXISTENTE + QUANTIDADE PESSOAS QUE QUEREM ENTRAR
+    var totalPessoas = carro.quantidadeDePessoas + numPessoas;
+    
+  //QUANTIDADE DE PESSOAS É IGUAL Á QUANTIDADE DE ASSENTOS E TOTAL DE PESSOAS É MAIOR OU IGUAL AO NÚMERO DE ASSENTOS DO CARRO?
+    if( carro.quantidadeDePessoas === carro.assentos && totalPessoas >= carro.assentos ){
+      return 'O carro já está lotado!';
+    }
+  
+  //TOTAL DE PESSOAS (AS QUE JÁ TEM + QUEM QUER ENTRAR ) É MAIOR QUE O NÚMERO DE ASSENTOS?
+    if( totalPessoas > carro.assentos ){
+      
+      //VERIFICAÇÃO DE QUANTAS PESSOAS AINDA CABEM NO CARRO
+      var quantasPessoasAindaCabem = carro.assentos - carro.quantidadeDePessoas;
+      
+      //VERIFICAÇÃO PLURAL OU SINGULAR DE PESSOAS PARA RETORNO
+      //CASO A QUANTIDADE DE PESSOAS SEJA IGUAL A 1, É PESSOA. CASO SEJA > 1, É PESSOAS
+      var pluralOuSingular = quantasPessoasAindaCabem === 1 ? ' pessoa' : ' pessoas';
+      
+      return 'Só cabem mais ' + quantasPessoasAindaCabem + pluralOuSingular;
+    }
+    
+  //DEPOIS DE TODAS AS VERIFICAÇÕES ACIMA, EM CASO DE TER PASSADO, ELE ADICIONA/ATUALIZA A QUANTIDADE DE PESSOAS
+    carro.quantidadeDePessoas = carro.quantidadeDePessoas + numPessoas;    
+    return 'Já temos ' + carro.quantidadeDePessoas + ' pessoa no carro!';
+  }
+
   
 
 /*
