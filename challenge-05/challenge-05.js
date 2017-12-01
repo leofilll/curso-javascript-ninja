@@ -120,7 +120,9 @@ usando a frase:
 */
 // ?
 
-  console.log( 'O livro Introdução ao HTML5 tem ' + book('Introdução ao HTML5').quantidadePaginas + ' páginas!' );
+  var nomeDoLivro = 'Introdução ao HTML5';
+
+  console.log( 'O livro ' + nomeDoLivro + ' tem ' + book( nomeDoLivro ).quantidadePaginas + ' páginas!' );
 
 /*
 Ainda com a função acima, imprima o nome do autor de um livro qualquer, usando
@@ -129,7 +131,9 @@ a frase:
 */
 // ?
 
-  console.log('O autor do livro Introdução ao HTML5 é ' + book('Introdução ao HTML5').autor + '.');
+  var nomeDoLivro = 'Segredos do Ninja Javascript';
+
+  console.log('O autor do livro ' + nomeDoLivro + ' é ' + book( nomeDoLivro ).autor + '.');
 
 /*
 Ainda com a função acima, imprima o nome da editora de um livro qualquer, usando
@@ -137,5 +141,7 @@ a frase:
 "O livro [NOME_DO_LIVRO] foi publicado pela editora [NOME_DA_EDITORA]."
 */
 
-  console.log('O livro Introdução ao HTML5 foi publicado pela editora ' + book('Introdução ao HTML5').editora + '.');
+  var nomeDoLivro = 'Smashing CSS';
+
+  console.log('O livro ' + nomeDoLivro + ' foi publicado pela editora ' + book( nomeDoLivro ).editora + '.');
 // ?
